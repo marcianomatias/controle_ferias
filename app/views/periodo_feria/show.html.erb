@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @periodo_ferium %>
+
+<div>
+  <%= link_to "Edit this periodo ferium", edit_periodo_ferium_path(@periodo_ferium) %> |
+  <%= link_to "Back to periodo feria", periodo_feria_path %>
+
+  <%= button_to "Destroy this periodo ferium", @periodo_ferium, method: :delete %>
+</div>

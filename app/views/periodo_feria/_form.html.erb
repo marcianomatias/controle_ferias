@@ -1,0 +1,32 @@
+<%= form_with(model: periodo_ferium) do |form| %>
+  <% if periodo_ferium.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(periodo_ferium.errors.count, "error") %> prohibited this periodo_ferium from being saved:</h2>
+
+      <ul>
+        <% periodo_ferium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :data_inicio, style: "display: block" %>
+    <%= form.date_field :data_inicio %>
+  </div>
+
+  <div>
+    <%= form.label :data_fim, style: "display: block" %>
+    <%= form.date_field :data_fim %>
+  </div>
+
+  <div>
+    <%= form.label :colaborador_id, style: "display: block" %>
+    <%= form.text_field :colaborador_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

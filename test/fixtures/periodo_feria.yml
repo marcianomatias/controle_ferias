@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data_inicio: 2023-03-03
+  data_fim: 2023-03-03
+  colaborador: one
+
+two:
+  data_inicio: 2023-03-03
+  data_fim: 2023-03-03
+  colaborador: two

@@ -1,0 +1,32 @@
+<%= form_with(model: colaborador) do |form| %>
+  <% if colaborador.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(colaborador.errors.count, "error") %> prohibited this colaborador from being saved:</h2>
+
+      <ul>
+        <% colaborador.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :cargo, style: "display: block" %>
+    <%= form.text_field :cargo %>
+  </div>
+
+  <div>
+    <%= form.label :data_contratacao, style: "display: block" %>
+    <%= form.date_field :data_contratacao %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

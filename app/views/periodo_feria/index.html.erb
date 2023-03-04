@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Periodo feria</h1>
+
+<div id="periodo_feria">
+  <% @periodo_feria.each do |periodo_ferium| %>
+    <%= render periodo_ferium %>
+    <p>
+      <%= link_to "Show this periodo ferium", periodo_ferium %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New periodo ferium", new_periodo_ferium_path %>
